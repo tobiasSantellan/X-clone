@@ -31,6 +31,7 @@ const LoginPage = () => {
         });
 
         const data = await res.json();
+        console.log("Data Logout:", data);
         if (!res.ok) {
           throw new Error(data.error || "Something went wrong");
         }
