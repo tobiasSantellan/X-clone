@@ -109,7 +109,7 @@ export const likeUnlikePost = async (req, res) => {
     } else {
       // Like Post
       post.likes.push(userId);
-      await User.updateOne({ _id: userId }, { $pull: { likedPosts: postId } });
+      await User.updateOne({ _id: userId }, { $push: { likedPosts: postId } }); // fix
       await post.save();
 
       const notification = new Notification({
