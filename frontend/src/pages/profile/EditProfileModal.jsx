@@ -114,7 +114,7 @@ const EditProfileModal = ({ authUser }) => {
               onChange={handleInputChange}
             />
             <button className="btn btn-primary rounded-full btn-sm text-white">
-              {isUpdatingProfile ? "Updating..." : "Update"}
+              {isUpdatingProfile ? "Updating..." : "Update my profile"}
             </button>
           </form>
         </div>
