@@ -101,7 +101,7 @@ export const logout = async (req, res) => {
 export const getMe = async (req, res) => {
   try {
     const user = await User.findById(req.user._id).select("-password");
-    console.log("User from getMe:", user);
+
     res.status(200).json(user);
   } catch (error) {
     console.log("error in middleware protect route:", error.message);
