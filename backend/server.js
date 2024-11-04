@@ -29,7 +29,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
-app.use("api/notifications", notificationRoutes);
+app.use("/api/notifications", notificationRoutes); // Fix: Add "/" to the beginning of "api/notifications" to ensure correct routing
 
 app.listen(PORT, () => {
   console.log(`Server is running on ${PORT}`);
